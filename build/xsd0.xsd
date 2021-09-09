@@ -1,0 +1,58 @@
+
+<?xml version="1.0" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="airportInfo" type="airportInfo"/>
+
+  <xs:element name="skyConditions" type="skyConditions"/>
+
+  <xs:element name="weatherConditions" type="weatherConditions"/>
+
+  <xs:element name="windConditions" type="windConditions"/>
+
+  <xs:complexType name="weatherConditions">
+    <xs:sequence>
+      <xs:element name="airportCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="barometer" type="xs:double" minOccurs="0"/>
+      <xs:element name="humidity" type="xs:double" minOccurs="0"/>
+      <xs:element name="sky" type="skyConditions" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="temp" type="xs:double" minOccurs="0"/>
+      <xs:element name="visibility" type="xs:int" minOccurs="0"/>
+      <xs:element name="wind" type="windConditions" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="skyConditions">
+    <xs:sequence>
+      <xs:element name="altitude" type="xs:int"/>
+      <xs:element name="cloudLayer" type="cloudLayerDescription" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="windConditions">
+    <xs:sequence>
+      <xs:element name="direction" type="xs:int"/>
+      <xs:element name="speed" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="airportInfo">
+    <xs:sequence>
+      <xs:element name="airportCode" type="xs:string" minOccurs="0"/>
+      <xs:element name="associatedCity" type="xs:string" minOccurs="0"/>
+      <xs:element name="elevation" type="xs:double" minOccurs="0"/>
+      <xs:element name="latitude" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="longitude" type="xs:decimal" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="cloudLayerDescription">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="scattered"/>
+      <xs:enumeration value="broken"/>
+      <xs:enumeration value="overcast"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

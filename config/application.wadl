@@ -1,0 +1,310 @@
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<application xmlns="http://wadl.dev.java.net/2009/02">
+    <doc xmlns:jersey="http://jersey.java.net/" jersey:generatedBy="Jersey: 2.0 2013-05-03 14:50:15"/>
+    <grammars>
+        <include href="application.wadl/xsd0.xsd">
+            <doc title="Generated" xml:lang="en"/>
+        </include>
+    </grammars>
+    <resources base="http://localhost:8080/donow06/rest/">
+        <resource path="/weather">
+            <method id="addAirport" name="POST">
+                <request>
+                    <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/xml"/>
+                    <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/json"/>
+                </request>
+                <response>
+                    <representation mediaType="text/plain"/>
+                </response>
+            </method>
+            <method id="apply" name="OPTIONS">
+                <request>
+                    <representation mediaType="*/*"/>
+                </request>
+                <response>
+                    <representation mediaType="application/vnd.sun.wadl+xml"/>
+                </response>
+            </method>
+            <method id="apply" name="OPTIONS">
+                <request>
+                    <representation mediaType="*/*"/>
+                </request>
+                <response>
+                    <representation mediaType="text/plain"/>
+                </response>
+            </method>
+            <method id="apply" name="OPTIONS">
+                <request>
+                    <representation mediaType="*/*"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="/addbean/{code}">
+                <method id="addAirport" name="GET">
+                    <request>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" type="xs:string"/>
+                    </request>
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/xml"/>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/json"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="application/vnd.sun.wadl+xml"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="/{code}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="code" style="template" type="xs:string"/>
+                <method id="updateAirport" name="PUT">
+                    <request>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/xml"/>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/json"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="getCurrentWeather" name="GET">
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="weatherConditions" mediaType="application/xml"/>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="weatherConditions" mediaType="application/json"/>
+                    </response>
+                </method>
+                <method id="deleteAirport" name="DELETE"/>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="application/vnd.sun.wadl+xml"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="/{code}/sky">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="code" style="template" type="xs:string"/>
+                <method id="getSkyConditions" name="GET">
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="skyConditions" mediaType="application/xml"/>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="skyConditions" mediaType="application/json"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="application/vnd.sun.wadl+xml"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="/echo/{message}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="message" style="template" type="xs:string"/>
+                <method id="echo" name="GET">
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="application/vnd.sun.wadl+xml"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="/add/{code}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="code" style="template" type="xs:string"/>
+                <method id="addAirport" name="GET">
+                    <request>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="name" style="query" type="xs:string"/>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="city" style="query" type="xs:string"/>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="elev" style="query" type="xs:double"/>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="lat" style="query" type="xs:string"/>
+                        <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="long" style="query" type="xs:string"/>
+                    </request>
+                    <response>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/xml"/>
+                        <ns2:representation xmlns:ns2="http://wadl.dev.java.net/2009/02" xmlns="" element="airportInfo" mediaType="application/json"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="application/vnd.sun.wadl+xml"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+            <resource path="/{code}/temp">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="code" style="template" type="xs:string"/>
+                <method id="getCurrentTemperature" name="GET">
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="application/vnd.sun.wadl+xml"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+        <resource path="application.wadl">
+            <method id="getWadl" name="GET">
+                <response>
+                    <representation mediaType="application/vnd.sun.wadl+xml"/>
+                    <representation mediaType="application/xml"/>
+                </response>
+            </method>
+            <method id="apply" name="OPTIONS">
+                <request>
+                    <representation mediaType="*/*"/>
+                </request>
+                <response>
+                    <representation mediaType="text/plain"/>
+                </response>
+            </method>
+            <method id="apply" name="OPTIONS">
+                <request>
+                    <representation mediaType="*/*"/>
+                </request>
+                <response>
+                    <representation mediaType="*/*"/>
+                </response>
+            </method>
+            <resource path="{path}">
+                <param xmlns:xs="http://www.w3.org/2001/XMLSchema" name="path" style="template" type="xs:string"/>
+                <method id="geExternalGrammar" name="GET">
+                    <response>
+                        <representation mediaType="application/xml"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="text/plain"/>
+                    </response>
+                </method>
+                <method id="apply" name="OPTIONS">
+                    <request>
+                        <representation mediaType="*/*"/>
+                    </request>
+                    <response>
+                        <representation mediaType="*/*"/>
+                    </response>
+                </method>
+            </resource>
+        </resource>
+    </resources>
+</application>

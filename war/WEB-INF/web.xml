@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app 
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+                        http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    version="3.0">
+    
+    <!-- Servlet 3.0 container:
+         Base RESTful URL can be mapped here or in 
+         com.ltree.services.weather.WeatherServiceApplication,
+         which is a subclass of javax.ws.rs.core.Application 
+         See https://jersey.java.net/documentation/latest/deployment.html#deployment.servlet.3 -->
+         
+    <servlet>
+        <servlet-name>com.ltree.services.weather.WeatherServiceApplication</servlet-name>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>com.ltree.services.weather.WeatherServiceApplication</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet 2.5+ container:
+         Map URL to Jersey servlet.
+         See https://jersey.java.net/documentation/latest/deployment.html#deployment.servlet.2     
+     -->
+         
+</web-app>

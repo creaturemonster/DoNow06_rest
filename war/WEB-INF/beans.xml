@@ -1,0 +1,12 @@
+<!-- Bean archive: configures CDI injectable bean classes. 
+     This empty beans.xml with version="1.1" and bean-discovery-mode="all" is
+     called an explicit bean archive.
+     See http://docs.oracle.com/javaee/7/tutorial/doc/cdi-adv001.htm#CACDCFDE -->
+     
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                        http://xmlns.jcp.org/xml/ns/javaee/beans_1_1.xsd"
+    version="1.1"
+    bean-discovery-mode="all">
+</beans>
